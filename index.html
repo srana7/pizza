@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Pizza Order</h1>
+            <p class="intro-text">Select your pizza, crust, toppings, and drinks for a perfect meal!</p>
+        </header>
+
+        <!-- Order Form -->
+        <form id="order-form">
+            <!-- Pizza Size Selection -->
+            <section class="pizza-size-selection">
+                <h2>Choose Pizza Size</h2>
+                <div class="pizza-option" data-size="small">
+                    <img src="images/small-pizza.jpg" alt="Small Pizza">
+                    <p>Small</p>
+                </div>
+                <div class="pizza-option" data-size="medium">
+                    <img src="images/medium-pizza.jpg" alt="Medium Pizza">
+                    <p>Medium</p>
+                </div>
+                <div class="pizza-option" data-size="large">
+                    <img src="images/large-pizza.jpg" alt="Large Pizza">
+                    <p>Large</p>
+                </div>
+                <div class="pizza-option" data-size="extra-large">
+                    <img src="images/extra-large-pizza.jpg" alt="Extra Large Pizza">
+                    <p>Extra Large</p>
+                </div>
+                <div class="pizza-option" data-size="personal">
+                    <img src="images/personal-pizza.jpg" alt="Personal Pizza">
+                    <p>Personal</p>
+                </div>
+            </section>
+
+            <!-- Crust Type Selection -->
+            <section class="crust-selection">
+                <h2>Choose Crust Type</h2>
+                <div class="crust-option" data-crust="regular">
+                    <img src="images/regular-crust.jpg" alt="Regular Crust">
+                    <p>Regular</p>
+                </div>
+                <div class="crust-option" data-crust="gluten-free">
+                    <img src="images/gluten-free-crust.jpg" alt="Gluten-Free Crust">
+                    <p>Gluten-Free</p>
+                </div>
+            </section>
+
+            <!-- Toppings Selection -->
+            <section class="toppings">
+                <h2>Choose Toppings</h2>
+                <label><input type="checkbox" name="toppings" value="cheese"> Extra Cheese</label>
+                <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
+                <label><input type="checkbox" name="toppings" value="sausage"> Sausage</label>
+                <label><input type="checkbox" name="toppings" value="bacon"> Bacon</label>
+                <label><input type="checkbox" name="toppings" value="pineapple"> Pineapple</label>
+            </section>
+
+            <!-- Drink Selection -->
+            <section class="drink-selection">
+                <h2>Choose Your Drink</h2>
+                <div class="drink-option" data-drink="cola">
+                    <img src="images/cola.jpg" alt="Cola">
+                    <p>Cola</p>
+                </div>
+                <div class="drink-option" data-drink="sprite">
+                    <img src="images/sprite.jpg" alt="Sprite">
+                    <p>Sprite</p>
+                </div>
+                <div class="drink-option" data-drink="water">
+                    <img src="images/water.jpg" alt="Water">
+                    <p>Water</p>
+                </div>
+                <div class="drink-option" data-drink="none">
+                    <img src="images/no-drink.jpg" alt="No Drink">
+                    <p>No Drink</p>
+                </div>
+            </section>
+
+            <!-- Extra Add-Ons (e.g., sides, sauces) -->
+            <section class="extras">
+                <h2>Extra Add-Ons</h2>
+                <label><input type="checkbox" name="extras" value="garlic-bread"> Garlic Bread</label>
+                <label><input type="checkbox" name="extras" value="chicken-wings"> Chicken Wings</label>
+                <label><input type="checkbox" name="extras" value="salad"> Salad</label>
+            </section>
+
+            <!-- Customer Info Section -->
+            <section>
+                <h2>Your Details</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1" min="1" required>
+
+                <label for="delivery-time">Preferred Delivery Time:</label>
+                <input type="time" id="delivery-time" required>
+
+                <label for="notes">Special Notes:</label>
+                <textarea id="notes"></textarea>
+
+                <button type="submit">Place Order</button>
+            </section>
+        </form>
+
+        <!-- Order Summary -->
+        <section class="order-summary">
+            <h3>Order Summary</h3>
+            <div id="summary-details"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

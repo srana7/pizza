@@ -1,0 +1,230 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffeb3b; /* Vibrant yellow background for energy and warmth */
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 3.5rem; /* Larger title for emphasis */
+  color: #d32f2f; /* Bright red color for strong attention */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.intro-text {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h2 {
+  color: #ff5722; /* Vibrant orange for subheadings */
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Layout for options (pizza, crust, drinks, extras) */
+.pizza-size-selection, .crust-selection, .drink-selection, .extras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Common Style for Options (Pizza, Crust, Drinks, Extra Items) */
+.pizza-option, .crust-option, .drink-option, .extra-option {
+  width: 48%; /* Each option takes up 48% of the container, creating 2 columns */
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  border: 2px solid transparent;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #fbe9e7; /* Light peach background for all options */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pizza-option:hover, .crust-option:hover, .drink-option:hover, .extra-option:hover {
+  transform: scale(1.1);
+  background-color: #ffccbc; /* Lighter peach on hover */
+  border: 2px solid #ff5722; /* Deep orange border on hover */
+}
+
+.pizza-option img, .crust-option img, .drink-option img, .extra-option img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pizza-option p, .crust-option p, .drink-option p, .extra-option p {
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Drink Section - Reduced Size */
+.drink-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Reduced gap between items */
+  justify-content: space-between;
+}
+
+.drink-option {
+  width: 40%; /* Reduced width for smaller drink options */
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  border: 2px solid transparent;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #fbe9e7; /* Light peach background for drink options */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.drink-option:hover {
+  transform: scale(1.1);
+  background-color: #ffccbc; /* Lighter peach on hover */
+  border: 2px solid #ff5722; /* Deep orange border on hover */
+}
+
+.drink-option img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.drink-option p {
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Personal Details Section (Form) */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="number"]:focus, textarea:focus {
+  border-color: #ff5722; /* Vibrant orange border on focus */
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  background-color: #fff3e0; /* Light yellow-orange */
+}
+
+button {
+  padding: 15px;
+  background-color: #ff9800; /* Warm orange button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #f44336; /* Red button on hover */
+}
+
+/* Order Summary */
+.order-summary {
+  background-color: #ffebee; /* Light pink background */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  display: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.order-summary h3 {
+  color: #f44336; /* Bright red header */
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.order-summary p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.order-summary .total-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff9800; /* Orange for total price */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .pizza-size-selection, .crust-selection, .drink-selection, .extras {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .pizza-option, .crust-option, .drink-option, .extra-option {
+      width: 100%; /* Make options full-width on smaller screens */
+  }
+
+  .container {
+      padding: 20px;
+  }
+
+  button {
+      font-size: 1.1rem;
+  }
+
+  h2, h1 {
+      font-size: 1.4rem;
+  }
+}
